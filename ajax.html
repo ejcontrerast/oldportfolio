@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ernesto's AJAX GET versus POST</title>
+	<link rel="stylesheet" href="style.css">
+	<script>
+		function loadDoc() {
+			let xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 1 ) {
+					document.getElementById("ready1").innerHTML =
+						"Readystate = 1 and server connection established";
+				}
+				if (this.readyState == 2 ) {
+					document.getElementById("ready2").innerHTML =
+						"Readystate = 2 and Request has been received.";
+				}
+				if (this.readyState == 3 ) {
+					document.getElementById("ready3").innerHTML =
+						"Readystate = 3 and Request is being processed.";
+				}
+				if (this.readyState == 4 ) {
+					document.getElementById("ready4").innerHTML =
+						"Readystate = 4 and Request finished and Response is ready. ";
+				}
+				if (this.readyState == 4 && this.status == 200) {
+					document.getElementById("demo").innerHTML =
+						this.responseText;
+				}
+			};
+			xhttp.open("GET", "Ernesto_info.txt", true);
+			xhttp.send();
+		}
+	</script>
+	<script>
+		function postToDB() {
+			let email = document.getElementById("postEmail").value;
+			let xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function () {
+				if (xhttp.readyState === 4 && xhttp.status === 200) {
+					document.getElementById("post").innerHTML = this.responseText;
+				}
+			};
+			xhttp.open("POST","AJAXdbEntry.php",true);
+			xhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+			xhttp.send("&emailPost=" + email);
+		}
+	</script>
+	<script>
+		function getFromDB() {
+			let xhttp = new XMLHttpRequest();
+			let email = document.getElementById("getEmail").value;
+			xhttp.onreadystatechange = function () {
+				if (xhttp.readyState === 4 && xhttp.status === 200) {
+					document.getElementById("getResponse").innerHTML = this.responseText;
+				}
+			};
+			xhttp.open("GET","AJAXdbGET.php?emailGet="+email,true);
+			xhttp.send();
+		}
+	</script>
+</head>
+<body>
+	<header>
+		<div class="main">
+			<div class="logo">
+				<a href="index.html"><img src="Logo.jpeg"></a>
+			</div>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="form_validation.html">Form Validation</a></li>
+				<li><a href="form_report.html">Form Report</a></li>
+				<li class="active"><a href="ajax.html">AJAX</a></li>
+				<li><a href="resume.html">Resume</a></li>
+				<li><a href="linkedin.html">LinkedIn</a></li>
+				<li><a href="wordpress.html">WordPress</a></li>
+				<li><a href="jquery.html">JQuery</a></li>
+				<li><a href="projects.php">Other Projects</a></li>
+			</ul>
+			<div class="mainContent">
+				<h2>AJAX responses from the server</h2><br>
+				<div id="ready1"></div>
+				<div id="ready2"></div>
+				<div id="ready3"></div>
+				<div id="ready4"></div>
+				<div id="demo">
+				<button type="button" onclick="loadDoc()">Responses from Server</button>
+				</div><br>
+				<hr>
+				<br><br><p><strong>POST an email to a database</strong></p>
+				<div id="post" class="postp"></div>
+				<form action="" method="POST" name="postform">
+					<label for="postEmail">Send your email to the database:</label>
+					<input type="email" id="postEmail" name="emailPost" placeholder="Enter your email" required><br>
+					<input type="button" name="pmethod" onclick="postToDB()" value="Send email to the database!"><br><br>
+				</form>
+				<hr>
+				<br><br><p><strong>GET the same data from the database</strong></p>
+				<p id="getResponse"></p>
+				<form method="GET" action="">
+					<label for="getEmail">Retrieve email from database</label>
+					<input type="text" id="getEmail" name="emailGet" placeholder="Enter your email" required><br>
+					<input type="button" name="gmethod" value="Get email from the database" onclick="getFromDB()"><br><br>
+				</form>
+				<br>
+			</div>
+		</div>
+	</header>
+</body>
+</html>

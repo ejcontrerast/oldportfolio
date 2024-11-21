@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ernesto's Form Validation</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<script>
+	function validateFormAlert() {
+	  let x = document.forms["myForm"]["fname"].value;
+	  if (x == "") {
+		alert("Plase, input your name!");
+		return false;
+	  }
+	}
+
+	function validateNumeric() {
+	  // Get the value of the input field with id="numb"
+	  let x = document.getElementById("numb").value;
+	  // If x is Not a Number or less than one or greater than 10
+	  let text;
+	  if (isNaN(x) || x < 1 || x > 10) {
+		text = "Please, input a number between 1 to 10";
+	  } else {
+		text = "Awesome";
+	  }
+	  document.getElementById("demo").innerHTML = text;
+	}
+	</script>
+	<header>
+		<div class="main">
+			<div class="logo">
+				<a href="index.html"><img src="Logo.jpeg"></a>
+			</div>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li class="active"><a href="form_validation.html">Form Validation</a></li>
+				<li><a href="form_report.html">Form Report</a></li>
+				<li><a href="ajax.html">AJAX</a></li>
+				<li><a href="resume.html">Resume</a></li>
+				<li><a href="linkedin.html">LinkedIn</a></li>
+				<li><a href="wordpress.html">WordPress</a></li>
+				<li><a href="jquery.html">JQuery</a></li>
+				<li><a href="projects.php">Other Projects</a></li>
+			</ul>
+<!-- 			<div class="content">
+				<h1>Ernesto's<br><span>Form & Report</span></h1>
+				<button class="btn"><a href="" target="_blank">Go to</a></button>
+			</div> -->
+			<div class="mainContent">
+				<h2>Ernesto's<br><span>Form Validation</span></h2><br><br>
+				
+				<h3>JavaScript Alert Validation</h3>
+				<form name="myForm" method="post">
+					<strong>Name:</strong> <input type="text" name="fname">
+					<button type="button" onclick="validateFormAlert()">Submit</button><br><br>
+				</form>
+				
+				<h3>JavaScript Numeric Validation</h3>
+				<form name="myForm2" method="post">
+				  <label for="yearsOnOC">How many year have you been at OC?<br>Enter a number between 1 and 10: </label><br>
+				  <strong>Years:</strong> <input id="numb">
+				  <button type="button" onclick="validateNumeric()">Submit</button>
+				  <p id="demo"></p><br>
+				</form>
+				
+				<h3>Htmlcallout boxes</h3>
+				<form name="myForm3" method="post">
+				  <label>Do not enter text but click on submit. What Happed?</label><br>
+				  <input type="text" name="clickOn" required>
+				  <input type="submit" name="click" value="Submit">
+				</form>
+			</div>
+		</div>
+	</header>
+</body>
+</html>
+

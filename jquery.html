@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ernesto's Jquery</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<div class="main">
+			<div class="logo">
+				<a href="index.html"><img src="Logo.jpeg"></a>
+			</div>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="form_validation.html">Form Validation</a></li>
+				<li><a href="form_report.html">Form Report</a></li>
+				<li><a href="ajax.html">AJAX</a></li>
+				<li><a href="resume.html">Resume</a></li>
+				<li><a href="linkedin.html">LinkedIn</a></li>
+				<li><a href="wordpress.html">WordPress</a></li>
+				<li class="active"><a href="jquery.html">JQuery</a></li>
+				<li><a href="projects.php">Other Projects</a></li>
+			</ul>
+		</div>
+	
+			<div class="content">
+				<div class="animation">
+					<h1 id="title">Ernesto's<br><span>Jquery</span></h1>
+				<button class="btn"><a>Run jQuery</a></button>
+				</div>
+			<div class="image">
+				<img hidden id="whiterabbit" src="whiterabbit.jpeg">
+			</div>
+			</div>
+	</header>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('.animation').animate({
+				'padding-left': '0px'
+			},"slow");
+
+			$("button").click(function(){
+				$('#whiterabbit').fadeToggle("slow");
+			});
+
+			$("button").on('mouseenter', () =>{
+				$("button").animate({
+					fontSize: '+=3px'
+				},300)
+			}).on('mouseleave',() => {
+				$("button").animate({
+					fontSize: '-=3px'
+				},300)
+			});
+		});
+	</script>
+</body>
+</html>
+

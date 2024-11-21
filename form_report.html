@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ernesto's Form Report</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<div class="main">
+			<div class="logo">
+				<a href="index.html"><img src="Logo.jpeg"></a>
+			</div>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="form_validation.html">Form Validation</a></li>
+				<li class="active"><a href="form_report.html">Form Report</a></li>
+				<li><a href="ajax.html">AJAX</a></li>
+				<li><a href="resume.html">Resume</a></li>
+				<li><a href="linkedin.html">LinkedIn</a></li>
+				<li><a href="wordpress.html">WordPress</a></li>
+				<li><a href="jquery.html">JQuery</a></li>
+				<li><a href="projects.php">Other Projects</a></li>
+			</ul>
+			<div class="mainContent">
+				<h2>Ernesto's<br><span>Form & Report</span></h2>
+
+				<h3>Html Form</Form></h3>
+				<form name="form" action="/action_form.php" method="post">
+				  <label><strong>First Name:</strong></label><br>
+				  <input type="text" name="fname" placeholder="First name" required><br>
+				  <label><strong>Last Name:</strong></label><br>
+				  <input type="text" name="lname" placeholder="Last name" required><br>
+				  <label><strong>Email:</strong> </label><br>
+				  <input type="email" name="email" placeholder="Email" required><br>
+				  <label><strong>Telephone:</strong></label><br>
+				  <input type="tel" name="telephone" placeholder="Phone number" required><br><br>
+				  <input type="submit" name="submitForm" value="Submit"><br><br><br><br>
+
+				  <a href="/getData.php">Get all the data that has been saved!</a><br>
+				  <div id="result"></div><br>
+				</form>
+			</div>
+		</div>
+	</header>
+</body>
+</html>

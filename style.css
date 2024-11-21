@@ -1,0 +1,301 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: Century Gothic;
+}
+header{
+	background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("Image.jpeg");
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+}
+
+ul{
+	float: right;
+	list-style: none;
+	margin-right: 5px;
+	margin-top: 10px;
+	font-size: 14.5px;
+}
+
+ul li{
+	display: inline-block;
+	margin-top: 10px;
+}
+
+ul li a{
+	text-decoration: none;
+	color: #00cbcc;
+	padding: 2px 20px;
+	margin-left: 2px;
+	border: 1px solid transparent;
+	border-radius: 3px;
+	transition: 0.3s ease;
+	font-weight: bold;
+}
+ul li a:hover{
+	background-color: #00cbcc;
+	color: #000;
+}
+
+ul li.active a{
+	background-color: #00cbcc;
+	color: #000;
+	border-radius: 3px;
+}
+
+.logo img{
+	float: left;
+	margin-top: 15px;
+	margin-left: 0px;
+	width: 240px;
+	height: auto;
+	margin-right: 0px;
+}
+
+.content {
+	position: absolute;
+	width: 1000px;
+	height: auto;
+	margin: auto;
+	top: 30%;
+	left: 2%;
+	color: #fff;
+}
+
+.content h1{
+	font-size: 80px;
+	padding-left: 15px;
+	letter-spacing: 2px;
+}
+
+.content span{
+	color: #00cbcc;	
+	font-size: 120px;
+}
+
+.content .btn{
+	background: transparent;
+	margin-top: 20px;
+	margin-left: 25px;
+	font-size: 15px;
+	font-weight: bold;
+	border-color: transparent;
+}
+
+.content .btn a{
+	text-decoration: none;
+	color: #00cbcc;
+	padding: 10px 30px;
+	border: 1px solid #00cbcc;
+	transition: 0.6s ease;
+	border-radius: 3px;
+}
+
+.content .btn a:hover{
+	background-color: #00cbcc;
+	color: #000;
+}
+
+.mainContent {
+	color: #00cbcc;
+	position: absolute;
+	width: 900px;
+	height: auto;
+	margin: auto;
+	top: 20%;
+	left: 7%;
+	font-size: 15px;
+}
+
+.mainContent input{
+	background: #000;
+	color: #fff;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.mainContent button{
+	text-decoration: none;
+	background: transparent;
+	color: #00cbcc;
+	padding: 2px 3px;
+	border: 1px solid #00cbcc;
+	transition: 0.6s ease;
+	border-radius: 3px;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.mainContent button:hover{
+	background-color: #00cbcc;
+	color: #000;
+}
+
+.mainContent h2{
+	color: #fff;
+	font-size: 30px;
+}
+
+.mainContent h2 span{
+	color: #00cbcc;
+	font-size: 50px;
+}
+
+.mainContent h3{
+	color: #fff;
+	font-size: 30px;
+}
+
+.mainContent input[name="submitForm"]{
+	text-decoration: none;
+	background: transparent;
+	color: #00cbcc;
+	padding: 2px 3px;
+	border: 1px solid #00cbcc;
+	transition: 0.6s ease;
+	border-radius: 3px;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.mainContent input[name="submitForm"]:hover{
+	background-color: #00cbcc;
+	color: #000;
+}
+
+.mainContent input[name="showdata"]{
+	text-decoration: none;
+	background: transparent;
+	color: #00cbcc;
+	padding: 2px 3px;
+	border: 1px solid #00cbcc;
+	transition: 0.6s ease;
+	border-radius: 3px;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.mainContent input[name="showdata"]:hover{
+	background-color: #00cbcc;
+	color: #000;
+}
+
+.mainContent input[name="click"]{
+	text-decoration: none;
+	background: transparent;
+	color: #00cbcc;
+	padding: 2px 3px;
+	border: 1px solid #00cbcc;
+	transition: 0.6s ease;
+	border-radius: 3px;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.mainContent input[name="click"]:hover{
+	background-color: #00cbcc;
+	color: #000;
+}
+
+.mainContent input[name="pmethod"]{
+	text-decoration: none;
+	background: transparent;
+	color: #00cbcc;
+	padding: 2px 3px;
+	border: 1px solid #00cbcc;
+	transition: 0.6s ease;
+	border-radius: 3px;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.mainContent input[name="pmethod"]:hover{
+	background-color: #00cbcc;
+	color: #000;
+}
+.mainContent input[name="gmethod"]{
+	text-decoration: none;
+	background: transparent;
+	color: #00cbcc;
+	padding: 2px 3px;
+	border: 1px solid #00cbcc;
+	transition: 0.6s ease;
+	border-radius: 3px;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.mainContent input[name="gmethod"]:hover{
+	background-color: #00cbcc;
+	color: #000;
+}
+
+.mainContent a{
+	color: #fff;
+}
+
+.mainContent p{
+	color: #fff;
+}
+
+.postp{
+	color: #fff;
+}
+
+.animation{
+	padding-left: 600px;
+}
+
+#whiterabbit{
+	margin-left: 800px;
+	margin-top: -400px;
+	border-radius: 10px;
+}
+
+.container{
+	margin-left: auto;
+    margin-right: auto;
+	width: 100vh;
+}
+
+.contentproject {
+	position: absolute;
+	width: 500px;
+	height: auto;
+	margin: auto;
+	top: 15%;
+	left: 5%;
+	color: #fff;
+}
+
+.contentproject h1{
+	font-size: 30px;
+	padding-left: 15px;
+	letter-spacing: 2px;
+}
+
+.contentproject span{
+	color: #00cbcc;	
+	font-size: 80px;
+	font-weight: bold;
+}
+
+.contentproject .btn{
+	background: transparent;
+	margin-top: 20px;
+	margin-left: 25px;
+	font-size: 15px;
+	font-weight: bold;
+	border-color: 00cbcc;
+	padding: 10px 30px;
+	transition: 0.6s ease;
+	border-radius: 3px;
+	border: 1px solid #00cbcc;
+	color: #00cbcc;
+}
+
+.contentproject .btn:hover{
+	background-color: #00cbcc;
+	color: #000;
+}
